@@ -24,7 +24,7 @@ ANSIBLE_METADATA = {'status': ['stableinterface'],
  
 DOCUMENTATION = '''
 ---
-module: redhat_check_rpms
+module: redhat_check_yum_pkgs
 version_added: historical
 short_description: Checks a list of RPMs against a target systems RPMs
  
