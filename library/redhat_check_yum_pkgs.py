@@ -51,10 +51,7 @@ EXAMPLES = '''
 '''
 
 
-import os
-import sys
 import yum
-import json
 
 class CheckYumPkgs:
   """
@@ -114,7 +111,7 @@ class CheckYumPkgs:
        ## Now we check if the item is in the in-memory dictionary
        if item in self.all_installed_pkgs:
          return 'present'
-     except:
+     except Exception:
        return 'absent'
    
   def redhat_check_pkgs( self, pkgs, state ):

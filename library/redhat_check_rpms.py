@@ -19,12 +19,6 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 #
  
-import os
-import platform
-import tempfile
-import shutil
-import ConfigParser
-import json 
 import rpm
  
 ANSIBLE_METADATA = {'status': ['stableinterface'],
@@ -119,7 +113,7 @@ class CheckRPMS:
        # Now we check if the item is in the in-memory dictionary
        if self.all_rpms[item]:
          return 'present'
-     except:
+     except KeyError:
        return 'absent'
    
   def redhat_check_rpms( self, rpms, state ):
