@@ -32,10 +32,10 @@ EXAMPLES:
 
 ### redhat_check_yum_pkgs.py
 
-This module s not much different than the redhat_check_rpms module.  The difference is that it uses the Yum DB to check 
-a list of RPM packagess against a target systems installed RPMs. This is supposed to be faster than using the standard
+This module is not much different than the redhat_check_rpms module.  The difference is that it uses the Yum DB to check 
+a list of RPM packages against a target systems installed RPMs. This is supposed to be faster than using the standard
 yum command to check for installed packages.  You can use this module in the case you want to check if packges are
-already installed ('present') on a system before installing them using the Ansible 'package' mpdule. Some of our customers 
+already installed ('present') on a system before installing them using the Ansible 'package' module. Some of our customers 
 use this to ensure that a system, after it has been provisioned, contains the exact RPM set that were expected. 
 
 Also notice that we don't pass use the full rpm package name that normally includes the version. 
@@ -56,7 +56,7 @@ EXAMPLES:
 This module checks that the repositories on a target system are either enabled or disabled. The idea is that using 
 this module you can verify the repositories that are enabled without having to run subscription-manager on each
 target system.  This module checks the "redhat.repo" file in the /etc/yum.repos.d directory by default but a
-different repo file can be speficied using the repofile: argument.
+different repo file can be specified using the repofile: argument.
  
 EXAMPLES:
 
