@@ -51,10 +51,7 @@ EXAMPLES = '''
 '''
 
 
-import os
-import sys
 import yum
-import json
 
 class CheckYumPkgs:
   """

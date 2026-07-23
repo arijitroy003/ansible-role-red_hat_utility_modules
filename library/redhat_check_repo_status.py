@@ -20,11 +20,7 @@
 #
  
 import os
-import platform
-import tempfile
-import shutil
 import ConfigParser
-import json 
  
 ANSIBLE_METADATA = {'status': ['stableinterface'],
                     'supported_by': 'core',
