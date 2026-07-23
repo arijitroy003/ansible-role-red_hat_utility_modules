@@ -53,7 +53,7 @@ EXAMPLES = '''
     redhat_check_rpms:
       rpms: ['iwl1000-firmware-39.31.5.1-69.el7.noarch','pygpgme-0.3-9.el7.x86_64','iwl3160-firmware-22.0.7.0-69.el7.noarch','yum-rhn-plugin-2.0.1-10.el7.noarch','python-chardet-2.2.1-1.el7_1.noarch','setools-libs-3.3.8-4.el7.x86_64','ncurses-libs-5.9-14.20130511.el7_4.x86_64','libcgroup-0.41-20.el7.x86_64']
       state: present
-    resgister: response
+    register: response
  
   - debug: var=response
  

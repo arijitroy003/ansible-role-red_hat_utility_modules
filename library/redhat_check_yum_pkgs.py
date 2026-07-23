@@ -44,7 +44,7 @@ EXAMPLES = '''
     redhat_check_yum_pkgs:
       pkgs: ['iwl1000','pygpgme','iwl3160','yum','python-chardet','setools-libs','ncurses-libs','libcgroup']
       state: present
-    resgister: response
+    register: response
  
   - debug: var=response
  
