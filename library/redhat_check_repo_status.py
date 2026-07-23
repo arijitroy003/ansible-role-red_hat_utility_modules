@@ -117,8 +117,9 @@ def main():
       rc,repostat = redhat_check_repo_status( repos, status, repofile )
     else:
        rc = 1
+       repostat = {}
        failmsg="Errors occurred! File [%s] does not exist!" % repofile
-      
+
 
     tempjson={}
     if rc == 0:
@@ -128,8 +129,11 @@ def main():
     else:
        repostat['rc'] = rc
        tempjson['repostat']=repostat
-       tempjson['failmsg']=failmsg
-       module.exit_json(rc=rc, **tempjson)
+       if (exists):
+          module.fail_json(msg="Repository check failed", **tempjson)
+       else:
+          tempjson['failmsg']=failmsg
+          module.fail_json(msg=failmsg, **tempjson)
  
 # import module snippets
 from ansible.module_utils.basic import *
