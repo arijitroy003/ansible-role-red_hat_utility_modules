@@ -24,7 +24,7 @@ ANSIBLE_METADATA = {'status': ['stableinterface'],
  
 DOCUMENTATION = '''
 ---
-module: redhat_check_rpms
+module: redhat_check_yum_pkgs
 version_added: historical
 short_description: Checks a list of RPMs against a target systems RPMs
  
@@ -44,7 +44,7 @@ EXAMPLES = '''
     redhat_check_yum_pkgs:
       pkgs: ['iwl1000','pygpgme','iwl3160','yum','python-chardet','setools-libs','ncurses-libs','libcgroup']
       state: present
-    register: response
+    resgister: response
  
   - debug: var=response
  
