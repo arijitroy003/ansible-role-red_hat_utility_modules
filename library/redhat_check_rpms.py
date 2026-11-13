@@ -19,6 +19,12 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 #
  
+import os
+import platform
+import tempfile
+import shutil
+import ConfigParser
+import json 
 import rpm
  
 ANSIBLE_METADATA = {'status': ['stableinterface'],
